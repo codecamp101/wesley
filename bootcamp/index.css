@@ -1,0 +1,27 @@
+body{
+    /* border:1px solid red; */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+div {
+    color:gray;
+    font-size: 500%;
+    font-family: system-ui;
+    /* border:1px solid orange; */
+    text-align: center;
+     width: fit-content;
+}
+i{
+   color:#333; 
+}
+b{
+    
+    background-color: magenta;
+    -webkit-text-fill-color:gold;
+    background-image: linear-gradient(red,blue);
+    background-clip: text;
+    text-shadow: 5px 5px 3px gray;
+}
