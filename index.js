@@ -37,10 +37,38 @@ fm.addEventListener('submit',(e)=>{
 
         },3000)
     } else{
-        output. textContent ='wrong password'
+        output. t
+       txtcontent ='wrong password'
     }
 });
 //this shows/hides the #panel
 start.addEventListener('click', () => {
     pan.classList.toggle('on');
 });
+//this formats a unix number into a human-readable date
+const dob = new Date('8/12/2016').getTime();//date format in Javascript mm-dd-yyyy
+pan.querySelector('#bod').textContent =Intl.DateTimeFormat('en-us',{dateStyle:'full'}).format(dob);
+//functions
+//a function is a group of statements that does not run unless when called
+function calculator () {
+    console.log(2 + 4);
+    console.log(10 - 5);
+    console.log(10 / 2);
+    console.log(3 * 3);
+    console.log(10 % 2); //modulus(short form is mod): the reamnder of a division
+}
+calculator();
+function callconfetti () {
+    /*
+    const t = "ME";
+    const u = "you"
+    console.log(9 - u); //concanatenation: join
+    */
+   const d = new Date("8/12/2016").getDate();
+   const m = new Date("8/12/2016").getMonth();
+   const today = Date.now();
+   if (new Date(today).getDate() === d && new Date(today).getMonth() === m) {
+    pan.classList.add('bgi');
+   }
+} 
+callconfetti();
