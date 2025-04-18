@@ -25,6 +25,13 @@ button {
     padding: 1em 0;
     letter-spacing: -5px;
 }
+.tile{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 300;
+    border-radius: 7px;
+    
+}
 
 body {
     height: 100vh;
@@ -97,7 +104,7 @@ body {
 }
 
 #backward {
-    left: 4em;
+    left: 2em;
     background-image: url('./chevron-back-outline.svg');
 }
 
@@ -132,8 +139,14 @@ body {
 #hintBtn:hover {
     box-shadow: 0px 3px 5px #ccc;
 }
-
+@keyframes blink{
+    
+}
 #action {
+    background-image: url('error_fawzi_mourad.gif');
+    background-position: right;
+    background-size: 30%;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,8 +164,7 @@ body {
 }
 
 #checkBtn > span {
-    /* height: 4em;
-    width: 4em; */
+    width: 4em; 
     color: #fff;
     font-size: 110%;
     font-weight: 500;
@@ -163,10 +175,97 @@ body {
     width: 4em;
     /* border: 1px solid red; */
     background-image: url(arrow-forward-outline.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #cup {
     height: 4em;
     width: 4em;
     background-image: url(trophy-outline.svg); 
+}
+#trophy, #wrap, #x_close {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+::backdrop {
+    background-color: #3339;
+}
+[popover] {
+    outline: none;
+    border: 0;
+}
+#gameover {
+    width: 360px;
+    height: 488px;
+    margin: auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+#wrap {
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    background-image: url('./sun_ray_pattern_stock_photos.jpg');
+    background-size: cover;
+}
+#trophy {
+    background-image: url('./trophy-outline.svg');
+    height: 10em;
+    width: 10em;
+    /* border: 1px solid; */
+    background-size: 70%;
+}
+@keyframes spinY {
+    from {
+        rotate: y 0deg;
+    }
+    to {
+        rotate: y 180deg;
+    }
+}
+#gameover:popover-open #trophy {
+    animation: spinY .5s linear 1 backwards;
+}
+#total_score, pre {
+    font-family: monospace;
+    font-size: 400%;
+    font-weight: 700;
+}
+sup {
+    font-family: monospace;
+    font-size: 70%;
+}
+#x_close {
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+    position: fixed;
+    right: 3em;
+    top: 3em;
+    background-image: url('./close-outline.svg');
+    border: 1px solid #f3f3f3;
+}
+
+@media(width <= 480px) {
+    .tile{
+        font-size: 100%;
+    }
+#forward, #backward{
+    background-size: 30%;
+    height: 2em;
+    width: 2em;
+}
+#word{
+    position: static;
+}
+#backward{
+
+}
 }

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WordSmith</title>
-    <link rel="stylesheet" href="wordsmith.css">
+    <!-- <link rel="stylesheet" href="wesley.css"> -->
+     <link rel="stylesheet" href="wordsmith.css">
 </head>
 <body>
     <div id="banner">
@@ -12,7 +13,7 @@
         <p>Smith</p>
     </div>
     <div id="word">
-        <button type="button" class="chevron" id="backward"></button>
+        <button type="button" class="chevron" id="backward" style="visibility: hidden;pointer-events: none;"></button>
         <button type="button" class="chevron" id="forward"></button>
         <span class="tile">T</span>
         <span class="tile">O</span>
@@ -39,6 +40,20 @@
     <footer>
         <div id="author">&commat;wesley + 2025</div>
     </footer>
+<div id="gameover" popover="manual">
+        <div id="wrap">
+            <div id="trophy"></div>
+            <div id="total_score"></div>
+            <div id="ascii">
+<!-- <pre>
+ | |
+.---.
+</pre> -->
+            </div>
+            <button type="button" id="x_close" popovertarget="gameover" popovertargetaction="hide"></button>
+        </div>
+    </div>
+
     <script src="wordsmith.js"></script>
 </body>
 </html>
